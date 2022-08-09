@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require("express")
 const app = express()
 
 app.use(express.static(__dirname+'/public'))
@@ -19,8 +19,7 @@ app.get("/addTwoNumbers",(req,res) => {
     res.json({statusCode: 200, data: result, message:"Success"})
 })
 
-
-var port = process.env.port || 3000;
+const port = process.env.port || 3000;
 
 app.listen(port,()=>{
     console.log("App running at http://localhost:"+port)
